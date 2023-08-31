@@ -5,7 +5,7 @@
 	"main": "main.js",
 	"scripts": {
 		"start": "cross-env NODE_ENV=development npx webpack serve",
-		"watch": "nodemon",
+		"watch": "node webpack-config/create-incremental-pages-watch.js && nodemon",
 		"build": "cross-env NODE_ENV=production npx webpack",
 		"server": "npx http-server -o build",
 		"install": "npx husky install"
