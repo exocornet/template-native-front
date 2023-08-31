@@ -36,11 +36,13 @@
 	},
 	"plugins": [
 		"@typescript-eslint",
+		"eslint-plugin-simple-import-sort",
 		"prettier"
 	],
 	"env": {
 		"es6": true,
 		"browser": true,
-		"node": true
+		"node": true,
+		"commonjs": true
 	}
 }
