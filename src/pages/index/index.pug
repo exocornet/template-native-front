@@ -11,10 +11,13 @@ block include-css
 block main
 	main
 		//- # ПОДКЛЮЧЕНИЕ СЕКЦИЙ НА СТРАНИЦУ ИЗ STORE СТРАНИЦЫ # -//
-		for section, key in index.getSections
-			+S(`${index.getSections[key].section}`, index.getSections[key])
+		for section, idx in index.getSections
+			+S(`${index.getSections[idx].section}`, section)
 
 block extra-content
+	//- # ПОДКЛЮЧЕНИЕ ДОПОЛНИТЕЛЬНЫХ БЛОКОВ НА СТРАНИЦУ ИЗ STORE СТРАНИЦЫ (POPUP, MODAL WINDOW, COOKIE и т.д.) # -//
+	for extraContent, idx in index.getSections
+		+S(`${index.getSections[idx].include}`, extraContent)
 
 append include-js
 	script(src=require('./index-script.ts') defer)

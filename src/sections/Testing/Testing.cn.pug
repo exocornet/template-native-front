@@ -1,0 +1,10 @@
+-
+	function classes(cn) {
+		const BLOCK = CN('testing')
+
+		return {
+			testing: BLOCK({
+				[`${cn?.color}`]: cn?.color === 'red',
+			})
+		}
+	}

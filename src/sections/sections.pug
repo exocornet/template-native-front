@@ -6,3 +6,10 @@ mixin S(nameSection, variablesSection)
 				+Test(variablesSection)&attributes(attributes)
 			else
 				+Test(variablesSection)&attributes(attributes)
+
+		when 'Testing'
+			if typeof pug_mixins[`${nameSection}`] !== 'function'
+				include Testing/Testing
+				+Testing(variablesSection)&attributes(attributes)
+			else
+				+Testing(variablesSection)&attributes(attributes)
