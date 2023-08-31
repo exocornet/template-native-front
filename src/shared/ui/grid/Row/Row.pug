@@ -1,8 +1,8 @@
 mixin Row(props)
-	//- классы стилей
+	//- # ПОЛУЧЕНИЕ CSS КЛАССОВ КОМПОНЕНТА # -//
 	include Row.cn.pug
-	+STYLES(props && props.bem)
+	- const styles = classes(props && props.cn);
 
-	//- верстка компонента
+	//- # ВЕРСТКА КОМПОНЕНТА # -//
 	div(class=styles.row)&attributes(attributes)
 		block

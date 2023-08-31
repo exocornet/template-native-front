@@ -1,27 +1,11 @@
 .container {
 	width: 100%;
-	//max-width: $screen-xl;
-	padding-inline: 56px;
-	margin-inline: auto ;
+	max-width: container-width(xxl);
+	margin-inline: auto;
+	padding-inline: 120px;
 
-	//@include to-l {
-	//	max-width: $screen-l;
-	//	padding-inline: 48px;
-	//}
-	//
-	//@include to-lg {
-	//	max-width: $screen-lg;
-	//}
-	//
-	//@include to-md {
-	//	max-width: $screen-md;
-	//	padding-inline: 24px;
-	//}
-	//
-	//@include to-sm {
-	//	max-width: $screen-sm
-	//}
-	//@include to-xs {
-	//	padding-inline: 16px
-	//}
+	@include media(xs) {
+		max-width: container-width(xs);
+		padding-inline: 20px;
+	}
 }

@@ -1,8 +1,8 @@
 mixin Container
-	//- классы стилей
+	//- # ПОЛУЧЕНИЕ CSS КЛАССОВ КОМПОНЕНТА # -//
 	include Container.cn.pug
-	+STYLES(props && props.bem)
+	- const styles = classes(props && props.cn);
 
-	//- верстка компонента
+	//- # ВЕРСТКА КОМПОНЕНТА # -//
 	div(class=styles.container)
 		block

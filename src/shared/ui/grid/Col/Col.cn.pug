@@ -1,14 +1,13 @@
-- let styles;
+-
+	function classes(cn) {
+		// логика формирования классов
+		const cols = cn?.cols ? cn?.cols : 'col-12';
 
-mixin STYLES(props)
-	-
-		function classes(cn) {
-			// логика формирования классов
-			const cols = cn?.cols ? cn?.cols : 'col-12';
+		// определение блока 'col'
+		const BLOCK = CN('col');
 
-			// определение блока 'col'
-			const block = CN('col');
-			const col = block({}, [
+		return {
+			col: BLOCK({}, [
 				cols,
 				cn?.order,
 				cn?.margin,
@@ -19,11 +18,6 @@ mixin STYLES(props)
 				cn?.direction,
 				cn?.offset,
 				cn?.animation,
-			]);
-
-			return {
-				col
-			}
+			])
 		}
-
-		styles = classes(props);
+	}

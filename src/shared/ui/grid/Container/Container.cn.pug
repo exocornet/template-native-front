@@ -1,14 +1,8 @@
-- let styles;
+-
+	function classes(cn) {
+		const BLOCK = CN('container');
 
-mixin STYLES(props)
-	-
-		function classes(cn) {
-			const block = CN('container');
-			const container = block();
-
-			return {
-				container
-			}
+		return {
+			container: BLOCK()
 		}
-
-		styles = classes(props);
+	}

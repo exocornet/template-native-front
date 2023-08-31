@@ -1,8 +1,8 @@
 mixin Col(props)
-	//- классы стилей
+	//- # ПОЛУЧЕНИЕ CSS КЛАССОВ КОМПОНЕНТА # -//
 	include Col.cn.pug
-	+STYLES(props && props.bem)
+	- const styles = classes(props && props.cn);
 
-	//- Верстка компонента
+	//- # ВЕРСТКА КОМПОНЕНТА # -//
 	div(class=styles.col)&attributes(attributes)
 		block

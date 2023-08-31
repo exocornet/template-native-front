@@ -1,10 +1,9 @@
-- let styles;
+-
+	function classes(cn) {
+		const BLOCK = CN('row');
 
-mixin STYLES(props)
-	-
-		function classes(cn) {
-			const block = CN('row');
-			const row = block({}, [
+		return {
+			row: BLOCK({}, [
 				cn?.rowCols,
 				cn?.gap,
 				cn?.margin,
@@ -12,11 +11,6 @@ mixin STYLES(props)
 				cn?.alignItems,
 				cn?.direction,
 				cn?.wrap
-			]);
-
-			return {
-				row
-			}
+			])
 		}
-
-		styles = classes(props);
+	}
