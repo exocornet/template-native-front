@@ -1,7 +1,6 @@
 doctype html
 html
 	head
-		//link(rel="stylesheet" href=require('../main.scss'))/
 		title Список страниц
 		style.
 			.body-list-pages {
@@ -28,4 +27,4 @@ html
 				| #{`${idx + 1}. ${link.name} (${link.title}.html)`}
 				br
 
-		script(src=require('../main.js') defer)
+		script(src=require('../main.ts') defer)

@@ -1,14 +1,25 @@
 {
 	"root": true,
-	"parser": "@babel/eslint-parser",
+	"parser": "@typescript-eslint/parser",
 	"extends": [
 		"eslint:recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
 		"prettier"
 	],
 	"rules": {
 		"semi": [
 			"error",
 			"always"
+		],
+		"@typescript-eslint/semi": [
+			"warn"
+		],
+		"@typescript-eslint/no-empty-interface": [
+			"error",
+			{
+				"allowSingleExtends": true
+			}
 		],
 		"no-console": "error",
 		"no-debugger": "error",
@@ -24,7 +35,7 @@
 		]
 	},
 	"plugins": [
-		"@babel",
+		"@typescript-eslint",
 		"prettier"
 	],
 	"env": {

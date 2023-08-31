@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const paths = require('./webpack-config/paths');
 const namePages = require('./src/app/list-pages/namePages').names;
 const incrementalPagesWatch = require('./webpack-config/incremental-pages-watch');
@@ -203,10 +204,15 @@ module.exports = {
 					},
 				],
 			},
+			// {
+			// 	test: /\.js$/,
+			// 	exclude: /node_modules/,
+			// 	use: ['babel-loader'],
+			// },
 			{
-				test: /\.js$/,
+				test: /\.ts?$/,
+				use: 'ts-loader',
 				exclude: /node_modules/,
-				use: ['babel-loader'],
 			},
 			{
 				test: /\.(jpe?g|png|gif|svg|webp)$/i,
