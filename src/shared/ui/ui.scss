@@ -1,1 +1,6 @@
-@import "grid/grid";
+// # ПОДКЛЮЧЕНИЕ СЕТКИ # //
+@import "grid/Container/Container";
+@import "grid/Row/Row";
+@import "grid/Col/Col";
+
+// # ПОДКЛЮЧЕНИЕ SHARED КОМПОНЕНТОВ # //

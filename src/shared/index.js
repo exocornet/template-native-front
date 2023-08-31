@@ -1,0 +1,1 @@
+// # ПОДКЛЮЧЕНИЕ JAVASCRIPT SHARED # //

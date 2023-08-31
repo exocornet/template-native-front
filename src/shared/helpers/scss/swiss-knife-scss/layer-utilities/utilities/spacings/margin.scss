@@ -1,0 +1,8 @@
+// # СТИЛИ ОТСТУПОВ MARGIN # //
+@include spacings(m, margin, true);
+@include spacings(my, margin-block, true);
+@include spacings(mx, margin-inline, true);
+@include spacings(mt, margin-top, true);
+@include spacings(mr, margin-right, true);
+@include spacings(mb, margin-bottom, true);
+@include spacings(ml, margin-left, true);

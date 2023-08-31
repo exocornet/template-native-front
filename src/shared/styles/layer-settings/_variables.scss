@@ -1,0 +1,87 @@
+// # ПОДКЛЮЧЕНИЕ SCSS ПЕРЕМЕННЫХ ДЛЯ root.scss и default.scss # //
+@import "../../helpers/scss/swiss-knife-scss/variables";
+
+// # ОБЪЯВЛЕНИЕ CSS ПЕРЕМЕННЫХ ДЛЯ ROOT # //
+$variables-root: variables-root((
+	// определение стилей для default (layer-elements)
+	"body-font-family": "Futura",
+	//"body-font-size": 1.6rem,
+	//"body-font-weight": 500,
+	//"body-line-height": 1.5,
+	"link-color": hsla(271, 60%, 23%, 1),
+	"link-hover-color": hsla(271, 60%, 23%, 0.6),
+
+	// colors standard
+	//"dark": #2E2E31,
+	//"white": #FFFFFF,
+	//"white-bg": #F5F5F7,
+	//"red": #FE0102,
+	//"red-hovered": #E40D0E,
+	//"red-active": #A60001,
+	//"red-light": #FFCCCC,
+	//"grey": #686877,
+	//"grey-light": #F5F5F7,
+	//"grey-medium": #D9D9D9,
+	//"transparent": transparent,
+	//"gradient-accent": linear-gradient(132deg, #FF0001 0%, #DD1676 42.81%, #BD13CB 79.79%),
+	//"gradient-accent-text": linear-gradient(132deg, #FF0001 0%, #DD1676 27.19%, #BD13CB 61.56%, #DD4E10 95.42%),
+
+	// transition
+	"transition-default": all 0.3s,
+	"transition-simple": all 0.4s,
+
+	// animation
+	//"animation-duration": 3s,
+
+	// font-size
+	"fs22": 2.2rem,
+	"fs18": 1.8rem,
+	"fs17": 1.7rem,
+	"fs14": 1.4rem,
+));
+
+// # ПЕРЕОПРЕДЕЛЕНИЕ ПЕРЕМЕННЫХ ДЛЯ МЕДИАЗАПРОСОВ # //
+$media-direction: "max";
+$breakpoints: (
+	xs: 375,
+	xxl: 1440,
+);
+
+// # ПЕРЕМЕННАЯ ДЛЯ ОТСТУПОВ # //
+$property-values-spacings: (auto, 0, 4, 8, 12, 16, 20, 24, 28, 32, 40, 44, 52, 60, 72, 80, 108, 160);
+
+// # SCSS ПЕРЕМЕННЫЕ # //
+$column-gap: var(--column-gap, 0);
+// colors standard
+$dark: var(--dark);
+
+$white: var(--white);
+$white-bg: var(--white-bg);
+
+$red: var(--red);
+$red-hovered: var(--red-hovered);
+$red-active: var(--red-active);
+$red-light: var(--red-light);
+
+$grey: var(--grey);
+$grey-light: var(--grey-light);
+$grey-medium: var(--grey-medium);
+
+$transparent: var(--transparent);
+
+$gradient-accent: var(--gradient-accent);
+$gradient-accent-text: var(--gradient-accent-text);
+
+// transition
+$transition-default: var(--transition-default);
+$transition-simple: var(--transition-simple);
+
+// animation
+$animation-duration: var(--animation-duration);
+
+// font-size
+$fs22: var(--fs22);
+$fs18: var(--fs18);
+$fs17: var(--fs17);
+$fs14: var(--fs14);
+

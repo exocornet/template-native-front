@@ -1,0 +1,19 @@
+// # КЛАССЫ УТИЛИТ # //
+@import "../../helpers/scss/swiss-knife-scss/layer-utilities/utilities";
+
+// # КАСТОМНЫЕ КЛАССЫ # //
+.w {
+	&-fit {
+		width: fit-content;
+	}
+
+	@include media(xs) {
+		&-fit\@xs {
+			width: fit-content;
+		}
+	}
+}
+
+.no-scroll {
+	overflow: hidden;
+}

@@ -1,0 +1,26 @@
+// # ФУНКЦИЯ ДЛЯ МЕДИАЗАПРОСА - "within" # //
+@function getPreviousSize($currentSize) {
+	$keys: map-keys($breakpoints);
+	$index: index($keys, $currentSize) - 1;
+	$value: map-values($breakpoints);
+	@return nth($value, $index);
+}
+
+// # Функция для Container # //
+@function container-width($media) {
+	@each $breakpoint, $value in $breakpoints {
+		@if $media == $breakpoint {
+			@return $value + px;
+		}
+	}
+}
+
+// # Для utilities. Подставляет название медиазапроса # //
+@function classMedia($nameKey) {
+	$keys: map-keys($breakpoints);
+	$index: index($keys, $nameKey);
+
+	@if $index <= length($keys) {
+		@return "#{nth($keys, $index)}";
+	}
+}

@@ -1,0 +1,13 @@
+// # ПАРАМЕТРЫ ПОДКЛЮЧЕНИЯ ШРИФТОВ # //
+// ## определение пути к подключаемому шрифту ## //
+$include-font-path: "../../../../../public/fonts/Futura/";
+// ## определение типов подключаемых шрифтов ## //
+$include-font-types: ("woff": "woff", "woff2": "woff2", "otf": "opentype");
+// ## определение имени шрифта для вызова в проекте ## //
+$include-font-family: "Futura";
+
+// # ВЫЗОВ МИКСИНА ПОДКЛЮЧЕНИЯ ШРИФТОВ # //
+//@include includeFont("futura-pt_demi", 500);
+//@include includeFont("futura-pt_medium", 450);
+//@include includeFont("futura-pt_book", 400);
+

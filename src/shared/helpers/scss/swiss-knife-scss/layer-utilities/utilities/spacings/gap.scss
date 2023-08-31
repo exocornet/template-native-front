@@ -1,0 +1,4 @@
+// # СТИЛИ ОТСТУПОВ GAP # //
+@include spacings(g, gap);
+@include spacings(rg, row-gap);
+@include spacings(cg, column-gap);
