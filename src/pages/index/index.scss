@@ -1,0 +1,15 @@
+@import "../../app/main";
+
+// # ------------ LAYER COMPONENTS ------------ # //
+// ## Стили для сложных компонентов ## //
+@include TestComponent;
+
+// ## Стили для секций ## //
+@include Test;
+
+// ## Стили для сложных компонентов имеющих бизнес-логику ## //
+@import "../../features/features";
+
+// # ------------ LAYER UTILITIES ------------ # //
+// ## Часто используемые стили (Utilities) ## //
+//@import "../shared/styles/layer-utilities/utilities";

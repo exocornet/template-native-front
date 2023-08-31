@@ -1,42 +1,45 @@
-include ../../../shared/helpers/helpers
-//- Подключение обязательных компонентов
+//- # ПОДКЛЮЧЕНИЕ ВСПОМОГАТЕЛЬНЫХ ФУНКЦИЙ ДЛЯ УДОБНОЙ РАБОТЫ # -//
+include ../../../shared/helpers/pug/helpers
+
+//- # ПОДКЛЮЧЕНИЕ ОБЯЗАТЕЛЬНЫХ КОМПОНЕНТОВ # -//
 include ../../../shared/ui/ui
-//include ../../components/components
+include ../../../components/components
 include ../../../sections/sections
 
-//- подключение store layout
+//- # ПОДКЛЮЧЕНИЕ STORE LAYOUT # -//
 include main.store.pug
 
-//- Подключение store страниц и компонентов
+//- # ПОДКЛЮЧЕНИЕ STORE СТРАНИЦ И ЛОГИКИ # -//
 block variables
 
 doctype html
 html(lang="ru")
-	//- HEAD
+	//- ## Head ## -//
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		//link(rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png')/
-		link(rel="stylesheet" href=`${cssPath}/main.css`)/
+		block include-css
 
 		title= pageTitle || "Название страницы"
 
 	body
-		//- SVG-SPRITE
+		//- ## Svg sprite ## -//
 
-		//- HEADER
+		//- ## Header ## -//
 		include ../../../features/Header/Header
 		+Header(mainLayout.Header)
 
-		//- подключение main и его содержимого
+		//- ## Подключение main и его содержимого ## -//
 		block main
 			h1 Создай main и вноси в него изменения
 
-		//- FOOTER
+		//- ## Footer ## -//
 		include ../../../features/Footer/Footer
 		+Footer(mainLayout.Footer)
 
-		//- SCRIPTS
-		script(src=`${jsPath}/main.js` defer)
-
 		block extra-content
+
+		//- ## Script ## -//
+		block include-js
+			script(src=`${jsPath}/main.js` defer)

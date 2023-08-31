@@ -21,13 +21,16 @@
 	};
 
 	//- Для подключение секций
-	function addSections() {
+	function addSections(section) {
+		const sections = [];
+
 		return {
-			set section(s) {
-				this[s] = eval(s);
-			}
-		}
-	};
+			addSection(section) {
+				sections.push(section);
+			},
+			getSections: sections
+		};
+	}
 
 	//- BEM classNames
 	function withNaming(preset) {

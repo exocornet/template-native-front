@@ -1,4 +1,4 @@
-mixin Footer(props)
+mixin TestComponent(props)
 	//- # ПОДКЛЮЧЕНИЕ ДЛЯ ПРОВЕРОК DATA, CN, OPT, ELEM # -//
 	include ../../shared/helpers/pug/shortcut-check-store
 
@@ -7,8 +7,9 @@ mixin Footer(props)
 		const variables = 'переменная';
 
 	//- # ПОЛУЧЕНИЕ CSS КЛАССОВ КОМПОНЕНТА # -//
-	include Footer.cn.pug
+	include TestComponent.cn.pug
 	- const styles = classes(props && props.cn);
 
 	//- # ВЕРСТКА КОМПОНЕНТА # -//
-	footer(class=styles.footer) #{DATA('text')}
+	div(class=styles.testComponent) #{DATA('text')}
+		span #{variables}

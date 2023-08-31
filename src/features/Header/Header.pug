@@ -1,11 +1,14 @@
 mixin Header(props)
+	//- # ПОДКЛЮЧЕНИЕ ДЛЯ ПРОВЕРОК DATA, CN, OPT, ELEM # -//
+	include ../../shared/helpers/pug/shortcut-check-store
+
 	//- # ЛОГИКА КОМПОНЕНТА # -//
 	-
-		const { data, cn } = props;
+		const variables = 'переменная';
 
 	//- # ПОЛУЧЕНИЕ CSS КЛАССОВ КОМПОНЕНТА # -//
 	include Header.cn.pug
-	- const styles = classes({ ...cn });
+	- const styles = classes(props && props.cn);
 
 	//- # ВЕРСТКА КОМПОНЕНТА # -//
-	div(class=styles.header) #{data.text}
+	header(class=styles.header) #{DATA('text')}

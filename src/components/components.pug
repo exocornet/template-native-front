@@ -1,0 +1,8 @@
+mixin I(nameComponent, variablesComponent)
+	case nameComponent
+		when 'TestComponent'
+			if typeof pug_mixins[`${nameComponent}`] !== 'function'
+				include TestComponent/TestComponent
+				+TestComponent(variablesComponent)&attributes(attributes)
+			else
+				+TestComponent(variablesComponent)&attributes(attributes)

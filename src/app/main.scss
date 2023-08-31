@@ -1,17 +1,10 @@
 // ## СТИЛИ ДЛЯ НАЧАЛЬНЫХ СУЩНОСТЕЙ И ПРОСТЫХ КОМПОНЕНТОВ И СЕТКА ## //
 //@import "../shared/shared";
 //@import "../shared/ui/grid/grid";
-//
-//// # ------------ LAYER COMPONENTS ------------ # //
-//// ## Стили для сложных компонентов ## //
-//@import "../components/components";
-//
-//// ## Стили для сложных компонентов имеющих бизнес-логику ## //
-////@import "../features/features";
-//
-//// ## Стили для секций ## //
-//@import "../sections/sections";
 
-// # ------------ LAYER UTILITIES ------------ # //
-// ## Часто используемые стили (Utilities) ## //
-//@import "../shared/styles/layer-utilities/utilities";
+// # ------------ LAYER COMPONENTS ------------ # //
+// ## Стили для сложных компонентов ## //
+@import "../components/components";
+
+// ## Стили для секций ## //
+@import "../sections/sections";
