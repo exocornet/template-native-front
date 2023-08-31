@@ -1,0 +1,241 @@
+.row {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin: 0 -16px;
+
+	& > * {
+		width: 100%;
+		padding-inline: 16px;
+	}
+
+	//@include to-md {
+	//	margin: 0 -12px;
+	//
+	//	& > * {
+	//		padding-inline: 12px;
+	//	}
+	//}
+}
+
+
+.row-cols-auto,
+.row-cols-1,
+.row-cols-2,
+.row-cols-3,
+.row-cols-4,
+.row-cols-5,
+.row-cols-6,
+.row-cols-l-auto,
+.row-cols-l-1,
+.row-cols-l-2,
+.row-cols-l-3,
+.row-cols-l-4,
+.row-cols-l-5,
+.row-cols-l-6,
+.row-cols-lg-auto,
+.row-cols-lg-1,
+.row-cols-lg-2,
+.row-cols-lg-3,
+.row-cols-lg-4,
+.row-cols-lg-5,
+.row-cols-lg-6,
+.row-cols-sm-auto,
+.row-cols-sm-1,
+.row-cols-sm-2,
+.row-cols-sm-3,
+.row-cols-sm-4,
+.row-cols-sm-5,
+.row-cols-sm-6 ,
+.row-cols-xs-auto,
+.row-cols-xs-1,
+.row-cols-xs-2,
+.row-cols-xs-3,
+.row-cols-xs-4,
+.row-cols-xs-5,
+.row-cols-xs-6 {
+	& > * {
+		padding-inline: 16px;
+
+		//@include to-md {
+		//	padding-inline: 12px;
+		//}
+	}
+}
+
+// классы для управления внутренними колонками
+.row-cols {
+	&-auto > * {
+		flex: 0 0 auto;
+
+		width: auto;
+	}
+
+	&-1 > * {
+		flex: 0 0 100%;
+
+		max-width: 100%;
+	}
+
+	&-2 > * {
+		flex: 0 0 calc(50% - (var(--column-gap, 0) / 2));
+
+		max-width: calc(50% - (var(--column-gap, 0) / 2));
+	}
+
+	&-3 > * {
+		flex: 0 0 calc(33.3333333333% - (var(--column-gap, 0) / 3));
+
+		width: calc(33.3333333333% - (var(--column-gap, 0) / 3));
+	}
+
+	&-4 > * {
+		flex: 0 0 calc(25% - (var(--column-gap, 0) / 4));
+
+		width: calc(25% - (var(--column-gap, 0) / 4));
+	}
+
+	&-5 > * {
+		flex: 0 0 calc(20% - (var(--column-gap, 0) / 5));
+
+		width: calc(20% - (var(--column-gap, 0) / 5));
+	}
+
+	&-6 > * {
+		flex: 0 0 calc(16.6666666667% - (var(--column-gap, 0) / 6));
+
+		width: calc(16.6666666667% - (var(--column-gap, 0) / 6));
+	}
+
+	//@include to-l {
+	//	&-l-auto > * {
+	//		flex: 0 0 auto;
+	//
+	//		width: auto;
+	//	}
+	//
+	//	&-l-1 > * {
+	//		flex: 0 0 100%;
+	//
+	//		max-width: 100%;
+	//	}
+	//
+	//	&-l-2 > * {
+	//		flex: 0 0 calc(50% - (var(--column-gap, 0) / 2));
+	//
+	//		max-width: calc(50% - (var(--column-gap, 0) / 2));
+	//	}
+	//
+	//	&-l-3 > * {
+	//		flex: 0 0 calc(33.3333333333% - (var(--column-gap, 0) / 3));
+	//
+	//		width: calc(33.3333333333% - (var(--column-gap, 0) / 3));
+	//	}
+	//
+	//	&-l-4 > * {
+	//		flex: 0 0 calc(25% - (var(--column-gap, 0) / 4));
+	//
+	//		width: calc(25% - (var(--column-gap, 0) / 4));
+	//	}
+	//
+	//	&-l-5 > * {
+	//		flex: 0 0 calc(20% - (var(--column-gap, 0) / 5));
+	//
+	//		width: calc(20% - (var(--column-gap, 0) / 5));
+	//	}
+	//
+	//	&-l-6 > * {
+	//		flex: 0 0 calc(16.6666666667% - (var(--column-gap, 0) / 6));
+	//
+	//		width: calc(16.6666666667% - (var(--column-gap, 0) / 6));
+	//	}
+	//}
+	//
+	//@include to-lg {
+	//	&-lg-auto > * {
+	//		flex: 0 0 auto;
+	//
+	//		width: auto;
+	//	}
+	//
+	//	&-lg-1 > * {
+	//		flex: 0 0 100%;
+	//
+	//		max-width: 100%;
+	//	}
+	//
+	//	&-lg-2 > * {
+	//		flex: 0 0 calc(50% - (var(--column-gap, 0) / 2));
+	//
+	//		max-width: calc(50% - (var(--column-gap, 0) / 2));
+	//	}
+	//
+	//	&-lg-3 > * {
+	//		flex: 0 0 calc(33.3333333333% - (var(--column-gap, 0) / 3));
+	//
+	//		width: calc(33.3333333333% - (var(--column-gap, 0) / 3));
+	//	}
+	//
+	//	&-lg-4 > * {
+	//		flex: 0 0 calc(25% - (var(--column-gap, 0) / 4));
+	//
+	//		width: calc(25% - (var(--column-gap, 0) / 4));
+	//	}
+	//
+	//	&-lg-5 > * {
+	//		flex: 0 0 calc(20% - (var(--column-gap, 0) / 5));
+	//
+	//		width: calc(20% - (var(--column-gap, 0) / 5));
+	//	}
+	//
+	//	&-lg-6 > * {
+	//		flex: 0 0 calc(16.6666666667% - (var(--column-gap, 0) / 6));
+	//
+	//		width: calc(16.6666666667% - (var(--column-gap, 0) / 6));
+	//	}
+	//}
+	//
+	//@include to-xs {
+	//	&-xs-auto > * {
+	//		flex: 0 0 auto;
+	//
+	//		width: auto;
+	//	}
+	//
+	//	&-xs-1 > * {
+	//		flex: 0 0 100%;
+	//
+	//		max-width: 100%;
+	//	}
+	//
+	//	&-xs-2 > * {
+	//		flex: 0 0 calc(50% - (var(--column-gap, 0) / 2));
+	//
+	//		max-width: calc(50% - (var(--column-gap, 0) / 2));
+	//	}
+	//
+	//	&-xs-3 > * {
+	//		flex: 0 0 calc(33.3333333333% - (var(--column-gap, 0) / 3));
+	//
+	//		width: calc(33.3333333333% - (var(--column-gap, 0) / 3));
+	//	}
+	//
+	//	&-xs-4 > * {
+	//		flex: 0 0 calc(25% - (var(--column-gap, 0) / 4));
+	//
+	//		width: calc(25% - (var(--column-gap, 0) / 4));
+	//	}
+	//
+	//	&-xs-5 > * {
+	//		flex: 0 0 calc(20% - (var(--column-gap, 0) / 5));
+	//
+	//		width: calc(20% - (var(--column-gap, 0) / 5));
+	//	}
+	//
+	//	&-xs-6 > * {
+	//		flex: 0 0 calc(16.6666666667% - (var(--column-gap, 0) / 6));
+	//
+	//		width: calc(16.6666666667% - (var(--column-gap, 0) / 6));
+	//	}
+	//}
+}

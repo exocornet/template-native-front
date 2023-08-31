@@ -1,0 +1,11 @@
+mixin Header(props)
+	//- # ЛОГИКА КОМПОНЕНТА # -//
+	-
+		const { data, cn } = props;
+
+	//- # ПОЛУЧЕНИЕ CSS КЛАССОВ КОМПОНЕНТА # -//
+	include Header.cn.pug
+	- const styles = classes({ ...cn });
+
+	//- # ВЕРСТКА КОМПОНЕНТА # -//
+	div(class=styles.header) #{data.text}

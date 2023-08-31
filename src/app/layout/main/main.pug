@@ -1,0 +1,42 @@
+include ../../../shared/helpers/helpers
+//- Подключение обязательных компонентов
+include ../../../shared/ui/ui
+//include ../../components/components
+include ../../../sections/sections
+
+//- подключение store layout
+include main.store.pug
+
+//- Подключение store страниц и компонентов
+block variables
+
+doctype html
+html(lang="ru")
+	//- HEAD
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		//link(rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png')/
+		link(rel="stylesheet" href=`${cssPath}/main.css`)/
+
+		title= pageTitle || "Название страницы"
+
+	body
+		//- SVG-SPRITE
+
+		//- HEADER
+		include ../../../features/Header/Header
+		+Header(mainLayout.Header)
+
+		//- подключение main и его содержимого
+		block main
+			h1 Создай main и вноси в него изменения
+
+		//- FOOTER
+		include ../../../features/Footer/Footer
+		+Footer(mainLayout.Footer)
+
+		//- SCRIPTS
+		script(src=`${jsPath}/main.js` defer)
+
+		block extra-content

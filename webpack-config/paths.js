@@ -1,0 +1,8 @@
+const path = require('path');
+
+module.exports = {
+	src: path.resolve(__dirname, '../src'),
+	build: path.resolve(__dirname, '../build'),
+	images: path.join(__dirname, '../src/app/assets/img/'),
+	fonts: path.join(__dirname, '../src/app/assets/fonts/'),
+};

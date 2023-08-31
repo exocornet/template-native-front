@@ -1,0 +1,22 @@
+- let styles;
+
+mixin STYLES(props)
+	-
+		function classes(cn) {
+			const block = CN('row');
+			const row = block({}, [
+				cn?.rowCols,
+				cn?.gap,
+				cn?.margin,
+				cn?.justify,
+				cn?.alignItems,
+				cn?.direction,
+				cn?.wrap
+			]);
+
+			return {
+				row
+			}
+		}
+
+		styles = classes(props);

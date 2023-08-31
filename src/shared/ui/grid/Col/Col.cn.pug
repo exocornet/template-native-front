@@ -1,0 +1,29 @@
+- let styles;
+
+mixin STYLES(props)
+	-
+		function classes(cn) {
+			// логика формирования классов
+			const cols = cn?.cols ? cn?.cols : 'col-12';
+
+			// определение блока 'col'
+			const block = CN('col');
+			const col = block({}, [
+				cols,
+				cn?.order,
+				cn?.margin,
+				cn?.padding,
+				cn?.display,
+				cn?.justify,
+				cn?.alignItems,
+				cn?.direction,
+				cn?.offset,
+				cn?.animation,
+			]);
+
+			return {
+				col
+			}
+		}
+
+		styles = classes(props);

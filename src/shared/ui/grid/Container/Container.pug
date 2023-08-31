@@ -1,0 +1,8 @@
+mixin Container
+	//- классы стилей
+	include Container.cn.pug
+	+STYLES(props && props.bem)
+
+	//- верстка компонента
+	div(class=styles.container)
+		block

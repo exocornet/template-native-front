@@ -1,0 +1,11 @@
+mixin Footer(props)
+	//- # ЛОГИКА КОМПОНЕНТА # -//
+	-
+		const { data, cn } = props;
+
+	//- # ПОЛУЧЕНИЕ CSS КЛАССОВ КОМПОНЕНТА # -//
+	include Footer.cn.pug
+	- const styles = classes({ ...cn });
+
+	//- # ВЕРСТКА КОМПОНЕНТА # -//
+	div(class=styles.footer) #{data.text}

@@ -1,0 +1,35 @@
+extends ../../app/layout/main/main
+
+block variables
+	//- # подключение store страницы # -//
+	include store/index-store
+
+block main
+	main
+		| ГЛАВНАЯ
+		//- подключение и вызов секции SECTION-BANNER-INDEX
+		//+S('section-banner-index', index.sectionBannerIndex)
+		//
+		////- подключение и вызов секции SECTION-ACTIONS
+		//+S('section-actions', index.sectionActions)
+		//
+		////- подключение и вызов секции SECTION-TABS-SLIDERS-ANIMATION-CARDS
+		//+S('section-tabs-sliders-animation-cards', index.sectionTabsSlidersAnimationCards)
+		//
+		////- подключение и вызов секции SECTION-REVIEWS
+		//+S('section-reviews', index.sectionReviews)
+		//
+		////- подключение и вызов секции SECTION-SLIDER-SIMPLE-CARDS
+		//+S('section-slider-simple-cards', index.sectionSliderSimpleCards)
+		//
+		////- подключение и вызов секции SECTION-ONLINE-DOWNLOAD
+		//+S('section-online-download', index.sectionOnlineDownload)
+		//
+		////- подключение и вызов секции SECTION-SLIDER-CARDS
+		//+S('section-slider-cards', index.sectionSliderCards)
+
+block extra-content
+	//- вызываем различные popup в зависимости от необходимости
+	//+I('brand-attention-popup', index.extraContent.brandAttentionPopup)
+	//+I('brand-cookie-popup', index.extraContent.brandCookiePopup)
+	//+S('section-feedback-popup', index.sectionFeedbackPopup)

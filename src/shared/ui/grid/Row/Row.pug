@@ -1,0 +1,8 @@
+mixin Row(props)
+	//- классы стилей
+	include Row.cn.pug
+	+STYLES(props && props.bem)
+
+	//- верстка компонента
+	div(class=styles.row)&attributes(attributes)
+		block

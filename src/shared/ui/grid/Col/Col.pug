@@ -1,0 +1,8 @@
+mixin Col(props)
+	//- классы стилей
+	include Col.cn.pug
+	+STYLES(props && props.bem)
+
+	//- Верстка компонента
+	div(class=styles.col)&attributes(attributes)
+		block

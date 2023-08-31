@@ -1,0 +1,567 @@
+-
+	const sectionTabsSlidersAnimationCards = {
+		data: {
+			onScroll: 'scroll'
+		},
+		elem: {
+			Heading: {
+				data: {
+					text: 'Выбрать страховую защиту'
+				},
+				bem: {
+					tag: 'h2',
+					margin: 'mb-32'
+				}
+			},
+			Slider: {
+				data: {
+					dataSlidesPerView: 3,
+					dataSlidesPerViewLg: 2,
+					dataSlidesPerViewMd: 2,
+					dataSlidesPerViewSm: '1.2',
+					dataSlidesPerViewXs: '1.05',
+					dataSliderLoop: 'loop',
+				},
+				opt: {
+					buttonToSlide: true,
+				},
+				dataArr: {
+					buttonToSlideArr: [
+						{
+							data: {
+								text: 'Жилье и ипотека',
+								dataSliderToSlide: 'home',
+							},
+							bem: {
+								jsClass: 'js-button-active',
+							}
+						},
+						{
+							data: {
+								text: 'Здоровье и спорт',
+								dataSliderToSlide: 'health'
+							}
+						},
+						{
+							data: {
+								text: 'Питомцы',
+								dataSliderToSlide: 'pets'
+							}
+						},
+					]
+				}
+			},
+			SliderSlides: [
+				{
+					data: {
+						slideFilter: 'home'
+					},
+					elem: {
+						CardHoverAnimation: {
+							elem: {
+								TextTitle: {
+									data: {
+										text: 'Страхование квартиры',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xxl',
+										fw: 'bold'
+									}
+								},
+								TextDescription: {
+									data: {
+										text: 'включая мебель, ремонт \n и&nbsp;ответственность перед соседями',
+										tag: 'p'
+									},
+									bem: {
+										size: 'm',
+										whiteSpace: 'pre-line',
+										margin: 'mt-8'
+									}
+								},
+								TextPrice: {
+									data: {
+										text: 'от 194 ₽ / мес',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xl',
+										fw: 'bold',
+										margin: 'mt-auto mt-xs-16 mt-xs-16'
+									}
+								},
+								Button: {
+									data: {
+										text: 'Оформить'
+									},
+									bem: {
+										size: 'medium',
+										margin: 'mt-20',
+										width: 'w-xs-100'
+									}
+								},
+								SvgPictureHover: {
+									data: {
+										imgPicXl: require('IMAGES/index/appartment-xl.webp'),
+										imgPicL: require('IMAGES/index/appartment-l.webp'),
+										imgPicLG: require('IMAGES/index/appartment-lg.webp'),
+										imgPicMD: require('IMAGES/index/appartment-md.webp'),
+										imgPicSM: require('IMAGES/index/appartment-sm.webp'),
+										imgPicXS: require('IMAGES/index/appartment-xs.webp'),
+									},
+									bem: {
+										svgHeartGradient: 'home',
+										positionPictureConteiner: 'heart',
+									},
+									opt: {
+										svgHeart: true
+									},
+								}
+							}
+						}
+					}
+				},
+				{
+					data: {
+						slideFilter: 'home'
+					},
+					elem: {
+						CardHoverAnimation: {
+							elem: {
+								TextTitle: {
+									data: {
+										text: 'Страхование дома',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xxl',
+										fw: 'bold'
+									}
+								},
+								TextDescription: {
+									data: {
+										text: 'включая мебель, ремонт и ответственность перед соседями',
+										tag: 'p'
+									},
+									bem: {
+										size: 'm',
+										whiteSpace: 'pre-line',
+										margin: 'mt-8'
+									}
+								},
+								TextPrice: {
+									data: {
+										text: 'от 195 ₽ / мес',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xl',
+										fw: 'bold',
+										margin: 'mt-auto mt-xs-16'
+									}
+								},
+								Button: {
+									data: {
+										text: 'Оформить'
+									},
+									bem: {
+										size: 'medium',
+										margin: 'mt-20',
+										width: 'w-xs-100'
+									}
+								},
+								SvgPictureHover: {
+									data: {
+										imgPicXl: require('IMAGES/index/house-xl.webp'),
+										imgPicL: require('IMAGES/index/house-l.webp'),
+										imgPicLG: require('IMAGES/index/house-lg.webp'),
+										imgPicMD: require('IMAGES/index/house-md.webp'),
+										imgPicSM: require('IMAGES/index/house-sm.webp'),
+										imgPicXS: require('IMAGES/index/house-xs.webp'),
+									},
+									bem: {
+										svgHeartGradient: 'home',
+										positionPictureConteiner: 'heart',
+									},
+									opt: {
+										svgHeart: true
+									},
+								}
+							}
+						}
+					}
+				},
+				{
+					data: {
+						slideFilter: 'home'
+					},
+					elem: {
+						CardHoverAnimation: {
+							elem: {
+								TextTitle: {
+									data: {
+										text: 'Страхование ипотеки ВТБ',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xxl',
+										fw: 'bold'
+									}
+								},
+								TextDescription: {
+									data: {
+										text: 'комплексная защита жилья, здоровья и титула',
+										tag: 'p'
+									},
+									bem: {
+										size: 'm',
+										margin: 'mt-8'
+									}
+								},
+								TextPrice: {
+									data: {
+										text: '',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xl',
+										fw: 'bold',
+										margin: 'mt-auto mt-xs-16'
+									}
+								},
+								Button: {
+									data: {
+										text: 'Оформить'
+									},
+									bem: {
+										size: 'medium',
+										margin: 'mt-20',
+										width: 'w-xs-100'
+									}
+								},
+								SvgPictureHover: {
+									data: {
+										imgPicXl: require('IMAGES/index/lamp-xl.webp'),
+										imgPicL: require('IMAGES/index/lamp-l.webp'),
+										imgPicLG: require('IMAGES/index/lamp-lg.webp'),
+										imgPicMD: require('IMAGES/index/lamp-md.webp'),
+										imgPicSM: require('IMAGES/index/lamp-sm.webp'),
+										imgPicXS: require('IMAGES/index/lamp-xs.webp'),
+									},
+									bem: {
+										svgHeartGradient: 'mortgage',
+										positionPictureConteiner: 'heart',
+									},
+									opt: {
+										svgHeart: true
+									},
+								}
+							}
+						}
+					}
+				},
+				{
+					data: {
+						slideFilter: 'health'
+					},
+					elem: {
+						CardHoverAnimation: {
+							elem: {
+								TextTitle: {
+									data: {
+										text: 'Страхование \n' +
+														'от несчастных случаев',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xxl',
+										fw: 'bold',
+										whiteSpace: 'pre-line',
+									}
+								},
+								TextDescription: {
+									data: {
+										text: 'а также первая помощь \n' +
+														'и оплата лекарств',
+										tag: 'p'
+									},
+									bem: {
+										size: 'm',
+										whiteSpace: 'pre-line',
+										margin: 'mt-8'
+									}
+								},
+								TextPrice: {
+									data: {
+										text: 'от 190 ₽ / мес',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xl',
+										fw: 'bold',
+										margin: 'mt-auto mt-xs-16'
+									}
+								},
+								Button: {
+									data: {
+										text: 'Оформить'
+									},
+									bem: {
+										size: 'medium',
+										margin: 'mt-20',
+										width: 'w-xs-100'
+									}
+								},
+								SvgPictureHover: {
+									data: {
+										imgPicXl: require('IMAGES/index/girl-xl.webp'),
+										imgPicL: require('IMAGES/index/girl-l.webp'),
+										imgPicLG: require('IMAGES/index/girl-lg.webp'),
+										imgPicMD: require('IMAGES/index/girl-md.webp'),
+										imgPicSM: require('IMAGES/index/girl-sm.webp'),
+										imgPicXS: require('IMAGES/index/girl-xs.webp'),
+									},
+									bem: {
+										svgHeartGradient: 'helth',
+										positionPictureConteiner: 'heart',
+									},
+									opt: {
+										svgHeart: true
+									},
+								}
+							}
+						}
+					}
+				},
+				{
+					data: {
+						slideFilter: 'health'
+					},
+					elem: {
+						CardHoverAnimation: {
+							elem: {
+								TextTitle: {
+									data: {
+										text: 'Страхование \n' +
+														'для занятий спортом',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xxl',
+										fw: 'bold',
+										whiteSpace: 'pre-line',
+									}
+								},
+								TextDescription: {
+									data: {
+										text: 'для секций, соревнований, \n'+
+														'марафонов и не только',
+										tag: 'p'
+									},
+									bem: {
+										size: 'm',
+										margin: 'mt-8'
+									}
+								},
+								TextPrice: {
+									data: {
+										text: 'от 84 ₽ / день',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xl',
+										fw: 'bold',
+										margin: 'mt-auto mt-xs-16'
+									}
+								},
+								Button: {
+									data: {
+										text: 'Оформить'
+									},
+									bem: {
+										size: 'medium',
+										margin: 'mt-20',
+										width: 'w-xs-100'
+									}
+								},
+								SvgPictureHover: {
+									data: {
+										imgPicXl: require('IMAGES/index/volleyball-xl.webp'),
+										imgPicL: require('IMAGES/index/volleyball-l.webp'),
+										imgPicLG: require('IMAGES/index/volleyball-lg.webp'),
+										imgPicMD: require('IMAGES/index/volleyball-md.webp'),
+										imgPicSM: require('IMAGES/index/volleyball-sm.webp'),
+										imgPicXS: require('IMAGES/index/volleyball-xs.webp'),
+									},
+									bem: {
+										svgHeartGradient: 'sport',
+										positionPictureConteiner: 'heart',
+									},
+									opt: {
+										svgHeart: true
+									},
+								}
+							}
+						}
+					}
+				},
+				{
+					data: {
+						slideFilter: 'health'
+					},
+					elem: {
+						CardHoverAnimation: {
+							elem: {
+								TextTitle: {
+									data: {
+										text: 'Страхование \n' +
+														'от укусов клещей',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xxl',
+										fw: 'bold',
+										whiteSpace: 'pre-line',
+									}
+								},
+								TextDescription: {
+									data: {
+										text: 'а также змей, бродячих собак \n' +
+														'и диких животных',
+										tag: 'p'
+									},
+									bem: {
+										size: 'm',
+										margin: 'mt-8'
+									}
+								},
+								TextPrice: {
+									data: {
+										text: 'от 290 ₽ / год',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xl',
+										fw: 'bold',
+										margin: 'mt-auto mt-xs-16'
+									}
+								},
+								Button: {
+									data: {
+										text: 'Оформить'
+									},
+									bem: {
+										size: 'medium',
+										margin: 'mt-20',
+										width: 'w-xs-100'
+									}
+								},
+								SvgPictureHover: {
+									data: {
+										imgPicXl: require('IMAGES/index/antimite-xl.webp'),
+										imgPicL: require('IMAGES/index/antimite-l.webp'),
+										imgPicLG: require('IMAGES/index/antimite-lg.webp'),
+										imgPicMD: require('IMAGES/index/antimite-md.webp'),
+										imgPicSM: require('IMAGES/index/antimite-sm.webp'),
+										imgPicXS: require('IMAGES/index/antimite-xs.webp'),
+									},
+									bem: {
+										svgHeartGradient: 'antimite',
+										positionPictureConteiner: 'heart',
+									},
+									opt: {
+										svgHeart: true
+									},
+								}
+							}
+						}
+					}
+				},
+				{
+					data: {
+						slideFilter: 'pets'
+					},
+					elem: {
+						CardHoverAnimation: {
+							elem: {
+								TextTitle: {
+									data: {
+										text: 'Страхование питомцев',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xxl',
+										fw: 'bold'
+									}
+								},
+								TextDescription: {
+									data: {
+										text: 'кошек, собак, хорьков \n' +
+														'и шиншилл',
+										tag: 'p'
+									},
+									bem: {
+										size: 'm',
+										whiteSpace: 'pre-line',
+										margin: 'mt-8'
+									}
+								},
+								TextPrice: {
+									data: {
+										text: 'от 370 ₽ / 3 мес',
+										tag: 'p'
+									},
+									bem: {
+										size: 'xl',
+										fw: 'bold',
+										margin: 'mt-auto mt-xs-16'
+									}
+								},
+								Button: {
+									data: {
+										text: 'Оформить'
+									},
+									bem: {
+										size: 'medium',
+										margin: 'mt-20',
+										width: 'w-xs-100'
+									}
+								},
+								SvgPictureHover: {
+									data: {
+										imgPicXl: require('IMAGES/index/pets-xl.webp'),
+										imgPicL: require('IMAGES/index/pets-l.webp'),
+										imgPicLG: require('IMAGES/index/pets-lg.webp'),
+										imgPicMD: require('IMAGES/index/pets-md.webp'),
+										imgPicSM: require('IMAGES/index/pets-sm.webp'),
+										imgPicXS: require('IMAGES/index/pets-xs.webp'),
+									},
+									bem: {
+										svgHeartGradient: 'pets',
+										positionPictureConteiner: 'heart',
+									},
+									opt: {
+										svgHeart: true
+									},
+								}
+							}
+						}
+					}
+				},
+				{
+					bem: {
+						emptySlide: 'empty',
+					},
+				},
+				{
+					bem: {
+						emptySlide: 'empty'
+					},
+				}
+			]
+		},
+		bem: {
+			roundingEffect: 'rounding-effect',
+		}
+	}
