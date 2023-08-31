@@ -15,3 +15,6 @@ block main
 			+S(`${index.getSections[key].section}`, index.getSections[key])
 
 block extra-content
+
+append include-js
+	script(src=require('./index-script.ts') defer)
